@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor's Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Optional: Custom styles */
+    body {
+      padding-top: 50px;
+      background-color: #f8f9fa;
+    }
+    .dashboard-container {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .consultation-card {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Doctor's Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="dashboard-container mt-5">
+    <div class="consultation-card">
+      <h5>Consultation 1</h5>
+      <p><strong>Patient Name:</strong> Janki Singh</p>
+      <p><strong>Date:</strong> October 20, 2023</p>
+      <p><strong>Time:</strong> 10:00 AM</p>
+      <p><strong>Reason for Consultation:</strong> Wheezing </p>
+      <a href="#" class="btn btn-primary">Patient Summary</a>
+      <a href="#" class="btn btn-primary">Patient Documents</a>
+      <a href="#" class="btn btn-primary">Patient History</a>
+    </div>
+    <div class="consultation-card">
+      <h5>Consultation 2</h5>
+      <p><strong>Patient Name:</strong> Sita Krishnan</p>
+      <p><strong>Date:</strong> October 21, 2023</p>
+      <p><strong>Time:</strong> 11:30 AM</p>
+      <p><strong>Reason for Consultation:</strong> Abdominal Pain</p>
+      <a href="#" class="btn btn-danger">Start Consultation</a>
+      <a href="#" class="btn btn-primary">Patient Summary</a>
+      <a href="#" class="btn btn-primary">Patient Documents</a>
+      <a href="#" class="btn btn-primary">Patient History</a>
+    </div>
+    <!-- Add more consultation cards as needed -->
+  </div>
+
+  <!-- Bootstrap JS and jQuery (required for Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

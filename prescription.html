@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post-Consultation Prescription</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- google chart js library -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Post-Consultation Prescription</a>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Patient Information :</h2>
+        <p><strong>Name:</strong> Janki Singh</p>
+        <p><strong>Age:</strong> 35</p>
+        <p><strong>Gender:</strong> Female</p>
+
+        <a href="#" class="btn btn-primary">Patient Summary</a>
+        <a href="#" class="btn btn-primary">Patient Documents</a>
+        <a href="#" class="btn btn-primary">Patient History</a>
+        <a href="#" class="btn btn-primary">Download Call Report</a>
+
+        <br></br>
+        <h2>Call Summary</h2>
+
+        The patient consulted the doctor due to recent health concerns: a persistent cough, difficulty breathing, and fatigue. The cough had started about two weeks prior, worse at night without specific triggers, accompanied by a fever that subsided after a few days. Though there was no chest pain, the patient felt tightness in the chest and increased fatigue. The doctor suspected a respiratory infection, considering the symptoms and the rural living environment prone to dust exposure and animals. Recommendations included avoiding potential irritants, rest, staying hydrated, and receiving a prescribed treatment to address the infection. The patient agreed to follow the prescription and update the doctor on their progress.
+
+
+        <br><br>
+        <h2>Suggested Prescription :</h2>
+        <br>
+        <b>
+          <p>
+          Amoxiclav 625 mg 7 days TD <br>
+          Betadine gargle BD <br>
+          Have warm fluids and take bed rest <br>
+          </p>
+        </b>
+        
+        <h2>Diagnosis Prediction Results :</h2>
+        <div id="pie_chart"></div>
+        <script>
+  
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+              // Data for the pie chart
+              var data = google.visualization.arrayToDataTable(  [['Disease', 'Chance'],
+              ["Respiratory Tract Infection", 30],
+              ["Asthma", 25],
+              ["Bronchitis", 20],
+              ["Allergies/Allergic Asthma", 15],
+              ["Pneumonia", 10]]);
+          
+              // Options for the pie chart
+              var options = {
+              };
+          
+              // Instantiate and draw the chart, passing in options.
+              var chart = new google.visualization.PieChart(document.getElementById('pie_chart'));
+              chart.draw(data, options);
+            }
+        </script>
+
+        <h2>Transcript :</h2>
+        
+        <p><strong>Doctor:</strong> Namaste! How are you feeling today?</p>
+        <p><strong>Patient:</strong> Namaste, Doctor. I've not been well lately. I have a cough, and it feels like I can't breathe properly sometimes.</p>
+        <p><strong>Doctor:</strong> I'm sorry to hear that. Let's try to understand your symptoms better. Can you tell me when the cough started and if you've noticed anything that triggers it?</p>
+        <p><strong>Patient:</strong> The cough started a couple of weeks ago. It's worse at night, and I haven't really noticed any specific triggers.</p>
+        <p><strong>Doctor:</strong> Thank you for sharing that. Have you experienced any other symptoms, like fever or chills?</p>
+        <p><strong>Patient:</strong> Yes, Doctor. I had a fever for a few days, but it went away on its own.</p>
+        <p><strong>Doctor:</strong> I see. Apart from the cough and fever, have you noticed any chest pain, wheezing, or any changes in your daily activities?</p>
+        <p><strong>Patient:</strong> No chest pain, but sometimes it feels a bit tight in my chest. And I get tired more easily than usual.</p>
+        <p><strong>Doctor:</strong> Got it. Your symptoms could suggest a respiratory infection. Now, about your living environment have there been any recent changes, like exposure to smoke, dust, or any new pets?</p>
+        <p><strong>Patient:</strong> Well, Doctor, I live in a rural area, so there's a lot of dust, and we have some animals around, but nothing has changed recently.</p>
+        <p><strong>Doctor:</strong> Understood. Considering your symptoms, it's possible you're dealing with a lower respiratory tract infection. However, to narrow it down,In the meantime, try to avoid any potential irritants,take proper rest, stay hydrated.</p>
+        <p><strong>Doctor:</strong> I'll be sending you a prescription.</p>
+        <p><strong>Patient:</strong> I'll take the prescription and let you know how I feel.</p>
+        <p><strong>Doctor:</strong> Ok! thank you.</p>
+
+
+
+      </div>
+      <div class="col-md-4">
+        <h2>Prescription</h2>
+        <div class="form-group">
+          <label for="medication">Diagnosis:</label>
+          <input type="text" class="form-control" id="medication">
+        </div>
+        <div class="form-group">
+          <label for="instructions">Instructions:</label>
+          <textarea class="form-control" id="instructions" rows="3"></textarea>
+        </div>
+        <a href="dashboard2.html" class="btn btn-primary btn-block">
+          Submit Prescription
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and jQuery (required for Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
